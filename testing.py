@@ -4,84 +4,45 @@ import time
 import keyboard
 import threading
 
-A_PIN = None
-A_SHARP_PIN = None
-B_PIN = None
-C_PIN = None
-C_SHARP_PIN = None
-D_PIN = None
-D_SHARP_PIN = None
-E_PIN = None
-F_PIN = None
-F_SHARP_PIN = None
-G_PIN = None
-G_SHARP_PIN = None
+PINS = {
+    "a": 2,
+    "a#": 3,
+    "b": 4,
+    "c": 17,
+    "c#": 27,
+    "D": 22,
+    "d#": 10,
+    "e": 9,
+    "f": 11,
+    "f#": 5,
+    "g": 6,
+    "g#": 13
+}
 
-
-def get_pin(note):
-    match note:
-        case "a":
-            return A_PIN
-        case "a#":
-            return A_SHARP_PIN
-        case "b":
-            return B_PIN
-        case "c":
-            return C_PIN
-        case "c#":
-            return C_SHARP_PIN
-        case "d":
-            return D_PIN
-        case "d#":
-            return D_SHARP_PIN
-        case "e":
-            return E_PIN
-        case "f":
-            return F_PIN
-        case "f#":
-            return F_SHARP_PIN
-        case "g":
-            return G_PIN
-        case "g#":
-            return G_SHARP_PIN
-
-
-def get_sound(note):
-    match note:
-        case "a":
-            return "./sounds/a.wav"
-        case "a#":
-            return "./sounds/a#.wav"
-        case "b":
-            return "./sounds/b.wav"
-        case "c":
-            return "./sounds/c.wav"
-        case "c#":
-            return "./sounds/c#.wav"
-        case "d":
-            return "./sounds/d.wav"
-        case "d#":
-            return "./sounds/d#.wav"
-        case "e":
-            return "./sounds/e.wav"
-        case "f":
-            return "./sounds/f.wav"
-        case "f#":
-            return "./sounds/f#.wav"
-        case "g":
-            return "./sounds/g.wav"
-        case "g#":
-            return "./sounds/g#.wav"
+SOUND_FILENAMES = {
+    "a": "./sounds/a.wav",
+    "a#": "./sounds/a#.wav",
+    "b": "./sounds/b.wav",
+    "c": "./sounds/c.wav",
+    "c#": "./sounds/c#.wav",
+    "d":  "./sounds/d.wav",
+    "d#": "./sounds/d#.wav",
+    "e": "./sounds/e.wav",
+    "f": "./sounds/f.wav",
+    "f#": "./sounds/f#.wav",
+    "g": "./sounds/g.wav",
+    "g#": "./sounds/g#.wav"
+}
 
 
 def play_note(note, interval):
-    thread = threading.Thread(target=playsound, args=(get_sound(note),))
+    thread = threading.Thread(target=playsound, args=(SOUND_FILENAMES[note],))
     thread.start()
     thread.join()
-#     pin = get_pin(note)
-#     GPIO.output(pin, GPIO.HIGH)
-#     time.sleep(interval)
-#     GPIO.output(pin, GPIO.LOW)
+    pin = PINS[note]
+    GPIO.output(pin, GPIO.HIGH)
+    time.sleep(interval)
+    GPIO.output(pin, GPIO.LOW)
 
 if __name__ == "__main__":
     keyboard.add_hotkey("1", lambda: play_note("a", 0))
