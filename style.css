@@ -1,0 +1,41 @@
+:root{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url('Untitled\ design-4.png');
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+h3{
+    padding-bottom: 200px;
+}
+.menuLinks{
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 300%;
+    color: black;
+}
+.songChoices{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    column-gap: 10px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    row-gap: 2px;
+}
+button{
+    border-radius: 50%;
+    background-color: lightgreen;
+    font-weight: bold;
+}
+p{
+    font-size: 120%;
+}
