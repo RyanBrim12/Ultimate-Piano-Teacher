@@ -17,18 +17,18 @@ PINS = {
     "b": 9
 }
 SOUND_FILENAMES = {
-    "a": "./sounds/a.wav",
-    "a#": "./sounds/a#.wav",
-    "b": "./sounds/b.wav",
-    "c": "./sounds/c.wav",
-    "c#": "./sounds/c#.wav",
-    "d": "./sounds/d.wav",
-    "d#": "./sounds/d#.wav",
-    "e": "./sounds/e.wav",
-    "f": "./sounds/f.wav",
-    "f#": "./sounds/f#.wav",
-    "g": "./sounds/g.wav",
-    "g#": "./sounds/g#.wav"
+    "a": "./Piano Notes/A.wav",
+    "a#": "./Piano Notes/A#.wav",
+    "b": "./Piano Notes/B.wav",
+    "c": "./Piano Notes/C.wav",
+    "c#": "./Piano Notes/C#.wav",
+    "d": "./Piano Notes/D.wav",
+    "d#": "./Piano Notes/D#.wav",
+    "e": "./Piano Notes/E.wav",
+    "f": "./Piano Notes/F.wav",
+    "f#": "./Piano Notes/F#.wav",
+    "g": "./Piano Notes/G.wav",
+    "g#": "./Piano Notes/G#.wav"
 }
 
 
