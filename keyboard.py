@@ -4,8 +4,8 @@ import time
 import threading
 
 PINS = {
-    "c": 8,
-    "c#": 25,
+    "c": 12,
+    "c#": 7,
     "d": 9,
     "d#": 10,
     "e": 24,
@@ -17,6 +17,7 @@ PINS = {
     "a#": 14,
     "b": 4
 }
+
 SOUND_FILENAMES = {
     "c": "./piano_notes/c.wav",
     "c#": "./piano_notes/c#.wav",
@@ -52,6 +53,7 @@ def wait_for_press(note):
 
 if __name__ == "__main__":
     GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
     for pin in PINS.values():
         GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
