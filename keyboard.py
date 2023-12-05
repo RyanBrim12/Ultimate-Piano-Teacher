@@ -5,31 +5,31 @@ import threading
 
 PINS = {
     "c": 12,
-    "c#": 7,
+    "c_sharp": 7,
     "d": 9,
-    "d#": 10,
+    "d_sharp": 10,
     "e": 24,
     "f": 23,
-    "f#": 22,
+    "f_sharp": 22,
     "g": 27,
-    "g#": 18,
+    "g_sharp": 18,
     "a": 15,
-    "a#": 14,
+    "a_sharp": 14,
     "b": 4
 }
 
 SOUND_FILENAMES = {
     "c": "./piano_notes/c.wav",
-    "c#": "./piano_notes/c#.wav",
+    "c_sharp": "./piano_notes/c_sharp.wav",
     "d": "./piano_notes/d.wav",
-    "d#": "./piano_notes/d#.wav",
+    "d_sharp": "./piano_notes/d_sharp.wav",
     "e": "./piano_notes/e.wav",
     "f": "./piano_notes/f.wav",
-    "f#": "./piano_notes/f#.wav",
+    "f_sharp": "./piano_notes/f_sharp.wav",
     "g": "./piano_notes/g.wav",
-    "g#": "./piano_notes/g#.wav",
+    "g_sharp": "./piano_notes/g_sharp.wav",
     "a": "./piano_notes/a.wav",
-    "a#": "./piano_notes/a#.wav",
+    "a_sharp": "./piano_notes/a_sharp.wav",
     "b": "./piano_notes/b.wav"
 }
 
