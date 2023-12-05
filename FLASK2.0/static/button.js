@@ -1,9 +1,9 @@
-var button = $("#led_button");
+var jingleBellsButton = $("#jingle_bells_button");
 button.click(function() {
     console.log(button.text());
     if (button.text() === "PLAY JINGLE") {
         $.ajax({
-            url: "/redled_on",
+            url: "/play_jingle_bells",
             type: "post",
             success: function(response) {
                 console.log(response);
@@ -12,7 +12,7 @@ button.click(function() {
         });
     } else {
         $.ajax({
-            url: "/redled_off",
+            url: "/stop_jingle_bells",
             type: "post",
             success: function() {
                 button.text("PLAY JINGLE");
@@ -20,35 +20,35 @@ button.click(function() {
         })
     }
 });
-var button2 = $("#led_button2");
-button2.click(function() {
-    console.log(button2.text());
-    if (button2.text() === "PLAY HAPPY") {
+var happyBirthdayButton = $("#happy_birthday_button");
+happyBirthdayButton.click(function() {
+    console.log(happyBirthdayButton.text());
+    if (happyBirthdayButton.text() === "PLAY HAPPY") {
         $.ajax({
-            url: "/yellowled_on",
+            url: "/play_happy_birthday",
             type: "post",
             success: function(response) {
                 console.log(response);
-                button2.text("PLAYING");
+                happyBirthdayButton.text("PLAYING");
             }
         });
     } else {
         $.ajax({
-            url: "/yellowled_off",
+            url: "/stop_happy_birthday",
             type: "post",
             success: function() {
-                button2.text("PLAY HAPPY");
+                happyBirthdayButton.text("PLAY HAPPY");
             }
         })
     }
 });
 
-var button = $("#led_button3");
+var hotCrossedBunsButton = $("#hot_crossed_buns_button");
 button.click(function() {
     console.log(button.text());
     if (button.text() === "PLAY HOT CROSS") {
         $.ajax({
-            url: "/led_on",
+            url: "/play_hot_crossed_buns",
             type: "post",
             success: function(response) {
                 console.log(response);
@@ -57,7 +57,7 @@ button.click(function() {
         });
     } else {
         $.ajax({
-            url: "/led_off",
+            url: "/stop_hot_crossed_buns",
             type: "post",
             success: function() {
                 button.text("PLAY HOT CROSS");
