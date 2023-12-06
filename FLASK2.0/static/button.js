@@ -1,13 +1,13 @@
 var jingleBellsButton = $("#jingle_bells_button");
-button.click(function() {
-    console.log(button.text());
-    if (button.text() === "PLAY") {
+jingleBellsButton.click(function() {
+    console.log(jingleBellsButton.text());
+    if (jingleBellsButton.text() === "PLAY") {
         $.ajax({
             url: "/play_jingle_bells",
             type: "post",
             success: function(response) {
                 console.log(response);
-                button.text("PLAYING");
+                jingleBellsButton.text("PLAYING");
             }
         });
     } else {
@@ -15,7 +15,7 @@ button.click(function() {
             url: "/stop_jingle_bells",
             type: "post",
             success: function() {
-                button.text("PLAY");
+                jingleBellsButton.text("PLAY");
             }
         })
     }
@@ -44,15 +44,15 @@ happyBirthdayButton.click(function() {
 });
 
 var hotCrossedBunsButton = $("#hot_crossed_buns_button");
-button.click(function() {
-    console.log(button.text());
-    if (button.text() === "PLAY") {
+hotCrossedBunsButton.click(function() {
+    console.log(hotCrossedBunsButton.text());
+    if (hotCrossedBunsButton.text() === "PLAY") {
         $.ajax({
             url: "/play_hot_crossed_buns",
             type: "post",
             success: function(response) {
                 console.log(response);
-                button.text("PLAYING");
+                hotCrossedBunsButton.text("PLAYING");
             }
         });
     } else {
@@ -60,7 +60,7 @@ button.click(function() {
             url: "/stop_hot_crossed_buns",
             type: "post",
             success: function() {
-                button.text("PLAY");
+                hotCrossedBunsButton.text("PLAY");
             }
         })
     }
