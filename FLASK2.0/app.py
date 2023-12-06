@@ -156,7 +156,7 @@ def play_happy_birthday():
     return "ok"
 
 
-@app.route("/stop_happpy_birthday", methods=["POST"])
+@app.route("/stop_happy_birthday", methods=["POST"])
 def stop_happy_birthday():
     GPIO.output(PINS["c_sharp"], GPIO.LOW)
     return "ok"
